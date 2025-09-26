@@ -2,10 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My GIS Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omar’s GIS Portfolio</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    #map {
+      height: 400px;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+    }
+    .projects {
+      margin-top: 20px;
+    }
+    .projects li {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hi there. Welcome to My GIS Portfolio</h1>
-  <p> I've made a few interactive examples of work I've done using ArcGIS, QGIS and MapInfo.</p>
-</body>
-</html>
+
+  <h1>Omar’s GIS Portfolio</h1>
+  <p>Welcome! Here are some of my GIS projects and other work.</p>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <h2>Other Projects</h2>
+  <ul class="projects">
+    <li>Project 1: Description</li>
+    <li>Project 2: Description</li>
+  </ul>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    var map = L.map('map').setView([37.8, -96], 4); // centered on US
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.or
